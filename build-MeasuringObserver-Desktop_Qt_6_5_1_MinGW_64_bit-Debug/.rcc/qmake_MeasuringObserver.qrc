@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/MeasuringObserver">
-    <file alias="qmldir">C:/MeasuringObserver/build-MeasuringObserver-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/MeasuringObserver/qmldir</file>
-  </qresource>
-</RCC>
-

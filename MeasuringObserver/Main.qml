@@ -132,4 +132,28 @@ ApplicationWindow {
             color: "#00ffc0"
         }
     }
+
+    Connections {
+        target: appcore
+        function onNewData(v) {
+            var channel = appcore.getChannel()
+            //console.log(v, v.length)
+            if (v.length > 0) {
+                axisX.max = v.length
+                axisX. tickCount = axisX.max
+                textInfo.text = "Channel ID: "+channel
+                gaugeTemperature.value = v[v.length-1][0]
+                gaugePressure.value = v[v.length-1][1]
+                gaugeHumidity.value = v[v.length-1][2]
+                series1.clear();
+                series2.clear();
+                series3.clear();
+                for (var i = 0; i < v.length; i++) {
+                    series2.append(v.length-i, v[i][0])
+                    series1.append(v.length-i, v[i][1]/10)
+                    series3.append(v.length-i, v[i][2])
+                }
+            }
+        }
+    }
 }

@@ -10,6 +10,7 @@ qt_standard_project_setup()
 
 qt_add_executable(appMeasuringObserver
     main.cpp
+
 )
 
 qt_add_qml_module(appMeasuringObserver
@@ -17,6 +18,7 @@ qt_add_qml_module(appMeasuringObserver
     VERSION 1.0
     QML_FILES Main.qml
     QML_FILES Gauge.qml
+    SOURCES appcore.h appcore.cpp
 )
 
 set_target_properties(appMeasuringObserver PROPERTIES
