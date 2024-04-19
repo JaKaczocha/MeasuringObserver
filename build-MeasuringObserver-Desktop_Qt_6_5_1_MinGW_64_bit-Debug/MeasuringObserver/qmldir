@@ -1,0 +1,6 @@
+module MeasuringObserver
+typeinfo appMeasuringObserver.qmltypes
+prefer :/MeasuringObserver/
+Main 1.0 Main.qml
+Gauge 1.0 Gauge.qml
+
