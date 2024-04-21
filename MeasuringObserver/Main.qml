@@ -4,6 +4,7 @@ import QtQuick.Controls.Material
 import QtCharts 2.15
 
 ApplicationWindow {
+    id: root
     Material.theme: Material.Dark
     Material.accent: Material.Orange
     width: 800
@@ -11,23 +12,70 @@ ApplicationWindow {
     visible: true
     title: qsTr("IoT Air")
 
+
+
     Frame {
         id: frameText
-        height: 30
+        height: 60
         anchors.top: parent.top
         anchors.topMargin: 10
         anchors.left: parent.left
         anchors.leftMargin: 10
         anchors.right: parent.right
         anchors.rightMargin: 10
+        topPadding: 5;
+        bottomPadding: 5;
+        leftPadding: 5;
 
-        Text {
-            id: textInfo
-            anchors.centerIn: parent
-            color: "#ffffff"
-            text: qsTr("")
-            font.pixelSize: 15
+        ComboBox {
+
+            id: comboBoxChannels
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.horizontalCenter;
+            anchors.rightMargin: parent.width / 4
+
+            currentIndex: 0;
+            displayText: model.get(currentIndex).text
+            model: ListModel {
+                //add channels id
+            }
+            onCurrentIndexChanged:  {
+                appcore.channel = model.get(currentIndex).text
+            }
+
+
+
+            font.pixelSize: 14
         }
+
+        Button {
+            anchors.left: comboBoxChannels.right
+            anchors.leftMargin: 2;
+            width: comboBoxChannels.width / 4
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+
+            background: Rectangle {
+                color: "#202020"
+                border.color: "#707070"
+                border.width: 1
+                radius: 4
+            }
+
+            Text {
+                id: buttonText
+                anchors.centerIn: parent;
+                color: "#ffffff"
+                text: "Add.."
+            }
+            onPressed: {
+                channelDialog.open()
+            }
+        }
+
+
     }
 
     Frame {
@@ -136,12 +184,12 @@ ApplicationWindow {
     Connections {
         target: appcore
         function onNewData(v) {
-            var channel = appcore.getChannel()
+            var channel = appcore.channel
             //console.log(v, v.length)
             if (v.length > 0) {
                 axisX.max = v.length
                 axisX. tickCount = axisX.max
-                textInfo.text = "Channel ID: "+channel
+
                 gaugeTemperature.value = v[v.length-1][0]
                 gaugePressure.value = v[v.length-1][1]
                 gaugeHumidity.value = v[v.length-1][2]
@@ -154,6 +202,14 @@ ApplicationWindow {
                     series3.append(v.length-i, v[i][2])
                 }
             }
+        }
+    }
+
+    DialogChannelChange {
+        id: channelDialog
+        onNewChannelAccepted: {
+            comboBoxChannels.model.append({ "text": newChannelName })
+            comboBoxChannels.currentIndex = comboBoxChannels.count - 1
         }
     }
 }

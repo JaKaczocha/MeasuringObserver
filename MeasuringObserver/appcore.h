@@ -14,8 +14,13 @@
 class AppCore : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(uint32_t channel READ getChannel WRITE setChannel NOTIFY channelChanged)
+
+
 public:
     explicit AppCore(QObject *parent = nullptr);
+
+
 private:
     QNetworkAccessManager *manager;
     QNetworkRequest request;
@@ -26,9 +31,21 @@ private:
 private slots:
     void managerFinished(QNetworkReply *reply);
     void onRequest();
-public slots:
-    uint32_t getChannel();
+
+    double getChannel() const
+    {
+        return channel;
+    }
+
+    void setChannel(double _channel)
+    {
+        channel = _channel;
+        emit channelChanged();
+    }
+
 signals:
+    void channelChanged();
     void newData(QVector<QVector<double>>);
+
 };
 #endif // APPCORE_H

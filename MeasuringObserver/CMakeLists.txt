@@ -18,7 +18,7 @@ qt_add_qml_module(appMeasuringObserver
     VERSION 1.0
     QML_FILES Main.qml
     QML_FILES Gauge.qml
-    QML_FILES ChannelList.qml
+    QML_FILES DialogChannelChange.qml
     SOURCES appcore.h appcore.cpp
 )
 

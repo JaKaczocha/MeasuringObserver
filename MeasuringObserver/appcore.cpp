@@ -53,7 +53,5 @@ void AppCore::onRequest()
     request.setUrl(QUrl(requeststring));
     manager->get(request);
 }
-uint32_t AppCore::getChannel()
-{
-    return channel;
-}
+
+
