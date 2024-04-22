@@ -1,23 +1,23 @@
 # MeasuringObserver
 
-### Aplikacja ciągle rozwijana.
+### Application still under development.
 
-Aplikacja została stworzona w ramach zajęć z programowania systemów wbudowanych, jest ona przykładem programu umożliwiającego użytkownikowi komunikacje z urządzeniem wbudowanym.
-Celem projektu jest stworzenie jednej aplikacji do zarządzania wieloma czujnikami i urządzeniami wykonywawczymi w miejscu zamieszkania.
+The application was developed as part of an embedded systems programming class, it is an example of a program that allows the user to communicate with an embedded device.
+The aim of the project is to create a single application to manage multiple sensors and executable devices on site.
 
-## Implementuje
-  * komunikacje z ThingSpeak Api
-  * konfiguracje maksymalnego czas na odczyt danych
-  * wyświetlanie danych pobranych z czujników na dashboardach
-  * dodawanie i usuwanie urządzeń przez użytkownika
+## It implements
+  * communication with the ThingSpeak Api
+  * configuring the maximum time for reading data
+  * displaying data taken from sensors on dashboards
+  * adding and removing devices by the user
 
 ## Soon
-  * mechanizm kont i uprawnień
-  * możliwość wysyłania danych do urządzenia
-  * informowanie użytkownika o statusie połączenia
-  * automatyzacja wysyłania komend do urządzenia
+  * mechanism of accounts and permissions
+  * ability to send data to a device
+  * informing the user about the connection status
+  * automation of sending commands to a device
      
-## Wykorzystywane technologie
+## Technologies used
   * Qt 6.4
   * qml
   * c++ 17
