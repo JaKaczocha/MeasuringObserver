@@ -119,34 +119,37 @@ ApplicationWindow {
     ChartView {
         id: line
         anchors.top: gaugeTemperature.bottom
-
         anchors.left: parent.left
-
         anchors.right: parent.right
-
         anchors.bottom: footer.top
         theme: ChartView.ChartThemeLight
-        ValuesAxis {
-            id: axisX
-            min: 1
-            max: 10
-            tickCount: max
-        }
-        ValuesAxis {
-            id: axisY
-            min: 34
-            max: 44
-            tickCount: max - min
-        }
 
         StackedBarSeries {
-                id: mySeries
-                axisX: BarCategoryAxis { categories: ["2007", "2008", "2009", "2010", "2011", "2012" ] }
+            id: temperatureSeries
 
-                BarSet { label: "Susan"; values: [35.8, 37.5, 35, 37.5, 36.7, 36.6] }
-                BarSet { label: "James"; values: [0, 1, 0, 1.7, 0, 0]; color: "#aa0120" }
+            axisX: BarCategoryAxis { categories: ["1", "2", "3", "4", "5", "6","7", "8", "9", "10" ]}
+            axisY: ValueAxis { id: ax; min: 33 } // Set minimum value to 33
+
+            BarSet { id: bar; label: "Temp"; values: [34,34,34,40,40.1,36,37,38,39,43] }
+            BarSet { id: bar2; label: "OverTemp"; values: [33,33,33,40,40.1,36,37,38,39,45]; color: "#ab1020" }
+
+            property var values1: []
+            property var time: []
+
+            onValues1Changed: {
+                for(var i = 0; i < 10; i++) {
+                    bar2.values[i] = 0;
+                    bar.values[i] = values1[i];
+                    bar2.values[i] = values1[i] > 37.5 ? values1[i] - 37.5 : 0;
+                    ax.min = 33;
+                }
             }
+        }
     }
+
+
+
+
 
 
 
@@ -201,4 +204,39 @@ ApplicationWindow {
             console.log("ConnectionEnd")
         }
     }
+    Connections {
+        target: appCore
+        function onNewData(dataArray, timeArray) {
+            console.log("onNewData called");
+
+
+
+
+
+            // Przypisanie osi X i Y do serii danych
+
+
+
+            // Przygotowanie tablicy wartości
+            var valuesArray = [];
+            for (var i = 0; i < dataArray.length; ++i) {
+                var value = dataArray[i][0];
+                valuesArray.push(value);
+            }
+
+            // Przypisanie tablicy wartości do serii danych
+            temperatureSeries.values1 = valuesArray;
+
+            console.log(temperatureSeries.values1);
+
+            // Przypisanie kategorii (osobno dla każdego punktu) do osi X
+            temperatureSeries.time = timeArray;
+            console.log(temperatureSeries.time);
+        }
+    }
+
+
+
+
+
 }

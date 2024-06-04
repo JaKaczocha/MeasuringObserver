@@ -23,6 +23,7 @@ qt_add_qml_module(appMeasuringObserverApp
 
     SOURCES     bledevice.cpp bledevice.h
                 deviceinfo.cpp deviceinfo.h
+                appcore.h appcore.cpp
     RESOURCES
             batt.png
 )
