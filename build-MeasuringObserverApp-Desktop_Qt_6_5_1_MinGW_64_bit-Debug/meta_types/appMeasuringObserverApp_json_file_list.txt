@@ -1,0 +1,2 @@
+C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/appMeasuringObserverApp_autogen/include/../EWIEGA46WW/moc_bledevice.cpp.json
+C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/appMeasuringObserverApp_autogen/include/../EWIEGA46WW/moc_deviceinfo.cpp.json

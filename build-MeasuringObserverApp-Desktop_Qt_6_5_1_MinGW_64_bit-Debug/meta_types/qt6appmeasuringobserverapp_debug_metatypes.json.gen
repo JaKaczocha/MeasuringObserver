@@ -1,2 +1,271 @@
 [
+    {
+        "classes": [
+            {
+                "className": "BLEDevice",
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "deviceListModel",
+                        "notify": "deviceListModelChanged",
+                        "read": "deviceListModel",
+                        "required": false,
+                        "reset": "resetDeviceListModel",
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false,
+                        "write": "setDeviceListModel"
+                    }
+                ],
+                "qualifiedClassName": "BLEDevice",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QList<QVariant>"
+                            }
+                        ],
+                        "name": "newTemperature",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QList<QVariant>"
+                            }
+                        ],
+                        "name": "newIntermediateTemperature",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "scanningFinished",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "connectionStart",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "connectionEnd",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QStringList"
+                            }
+                        ],
+                        "name": "deviceListModelChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "quint8"
+                            }
+                        ],
+                        "name": "batteryLevel",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QBluetoothDeviceInfo"
+                            }
+                        ],
+                        "name": "addDevice",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "name": "scanFinished",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QBluetoothDeviceDiscoveryAgent::Error"
+                            }
+                        ],
+                        "name": "deviceScanError",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QBluetoothUuid"
+                            }
+                        ],
+                        "name": "serviceDiscovered",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "name": "serviceScanDone",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QLowEnergyController::Error"
+                            }
+                        ],
+                        "name": "controllerError",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "name": "deviceConnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "name": "deviceDisconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QLowEnergyService::ServiceState"
+                            }
+                        ],
+                        "name": "serviceStateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QLowEnergyService::ServiceState"
+                            }
+                        ],
+                        "name": "serviceBattStateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QLowEnergyCharacteristic"
+                            },
+                            {
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "updateData",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "type": "QLowEnergyDescriptor"
+                            },
+                            {
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "confirmedDescriptorWrite",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "startScan",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "name": "startConnect",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "disconnectFromDevice",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "writeData",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QStringList"
+                            }
+                        ],
+                        "name": "setDeviceListModel",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "resetDeviceListModel",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "bledevice.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "DeviceInfo",
+                "object": true,
+                "qualifiedClassName": "DeviceInfo",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "deviceChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "deviceinfo.h",
+        "outputRevision": 68
+    }
 ]

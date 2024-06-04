@@ -306,6 +306,9 @@ QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=C:/Qt/6.5.1/mingw_64/bin/qmake.exe
 
+//The directory containing a CMake configuration file for Qt6Bluetooth.
+Qt6Bluetooth_DIR:PATH=C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth
+
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6CoreTools
 
@@ -601,6 +604,10 @@ QT_FEATURE_avx512vbmi2:INTERNAL=ON
 QT_FEATURE_avx512vl:INTERNAL=ON
 //Qt feature: backtrace (from target Qt6::Core)
 QT_FEATURE_backtrace:INTERNAL=OFF
+//Qt feature: bluez (from target Qt6::Bluetooth)
+QT_FEATURE_bluez:INTERNAL=OFF
+//Qt feature: bluez_le (from target Qt6::Bluetooth)
+QT_FEATURE_bluez_le:INTERNAL=OFF
 //Qt feature: brotli (from target Qt6::Network)
 QT_FEATURE_brotli:INTERNAL=OFF
 //Qt feature: c11 (from target Qt6::Core)
@@ -849,6 +856,8 @@ QT_FEATURE_library:INTERNAL=ON
 QT_FEATURE_libudev:INTERNAL=OFF
 //Qt feature: linkat (from target Qt6::Core)
 QT_FEATURE_linkat:INTERNAL=OFF
+//Qt feature: linux_crypto_api (from target Qt6::Bluetooth)
+QT_FEATURE_linux_crypto_api:INTERNAL=OFF
 //Qt feature: linux_netlink (from target Qt6::Network)
 QT_FEATURE_linux_netlink:INTERNAL=OFF
 //Qt feature: linuxfb (from target Qt6::Gui)
@@ -1207,6 +1216,8 @@ QT_FEATURE_whatsthis:INTERNAL=ON
 QT_FEATURE_wheelevent:INTERNAL=ON
 //Qt feature: widgets (from target Qt6::Core)
 QT_FEATURE_widgets:INTERNAL=ON
+//Qt feature: winrt_bt (from target Qt6::Bluetooth)
+QT_FEATURE_winrt_bt:INTERNAL=OFF
 //Qt feature: x86intrin (from target Qt6::Core)
 QT_FEATURE_x86intrin:INTERNAL=ON
 //Qt feature: xcb (from target Qt6::Gui)

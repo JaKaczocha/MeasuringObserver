@@ -35,6 +35,7 @@
 #define __cpp_binary_literals 201304L
 #define __FLT64_DECIMAL_DIG__ 17
 #define __cpp_noexcept_function_type 201510L
+#define QT_BLUETOOTH_LIB 1
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __cpp_variadic_templates 200704L
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffULL

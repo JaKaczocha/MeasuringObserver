@@ -935,6 +935,15 @@
 		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake",
 		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Quick/Qt6QuickVersionlessTargets.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfigVersion.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfigVersionImpl.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothDependencies.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothAdditionalTargetInfo.cmake",
+		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessTargets.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/GNUInstallDirs.cmake",
 		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"C:/Qt/6.5.1/mingw_64/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in",
@@ -944,13 +953,28 @@
 	"CMAKE_SOURCE_DIR" : "C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp",
 	"DEP_FILE" : "C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/appMeasuringObserverApp_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "appMeasuringObserverApp_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/bledevice.h",
+			"MU",
+			"EWIEGA46WW/moc_bledevice.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/deviceinfo.h",
+			"MU",
+			"EWIEGA46WW/moc_deviceinfo.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/appMeasuringObserverApp_autogen/include",
 	"MOC_COMPILATION_FILE" : "C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/appMeasuringObserverApp_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
+		"QT_BLUETOOTH_LIB",
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NEEDS_QMAIN",
@@ -991,6 +1015,7 @@
 		"C:/Qt/6.5.1/mingw_64/include/QtGui",
 		"C:/Qt/6.5.1/mingw_64/include/QtQmlModels",
 		"C:/Qt/6.5.1/mingw_64/include/QtOpenGL",
+		"C:/Qt/6.5.1/mingw_64/include/QtBluetooth",
 		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++",
 		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32",
 		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward",
@@ -1020,6 +1045,7 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qmlcache/appMeasuringObserverApp_Gauge_qml.cpp",
 		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qmlcache/appMeasuringObserverApp_Main_qml.cpp",
 		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qrc_appMeasuringObserverApp_raw_qml_0.cpp",
 		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qrc_qmake_MeasuringObserverApp.cpp",
@@ -1036,6 +1062,16 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/bledevice.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/deviceinfo.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/main.cpp",
 			"MU",
 			null
@@ -1050,6 +1086,7 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
+		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qmlcache/appMeasuringObserverApp_Gauge_qml.cpp",
 		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qmlcache/appMeasuringObserverApp_Main_qml.cpp",
 		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qrc_appMeasuringObserverApp_raw_qml_0.cpp",
 		"C:/Users/User/Desktop/temp/MeasuringObserver/build-MeasuringObserverApp-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/.rcc/qrc_qmake_MeasuringObserverApp.cpp",

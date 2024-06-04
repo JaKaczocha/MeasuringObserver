@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="/MeasuringObserverApp/">
     <file alias="Main.qml">C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/Main.qml</file>
+    <file alias="Gauge.qml">C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/Gauge.qml</file>
     <file alias="batt.png">C:/Users/User/Desktop/temp/MeasuringObserver/MeasuringObserverApp/batt.png</file>
   </qresource>
 </RCC>
